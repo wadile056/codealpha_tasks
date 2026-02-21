@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoundWave — Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <div class="app">
+
+    <!-- PLAYER CARD -->
+    <div class="player-card">
+
+      <div class="brand">SOUNDWAVE</div>
+
+      <!-- Album Art -->
+      <div class="artwork-wrapper">
+        <div class="artwork-ring"></div>
+        <div class="artwork" id="artwork">
+          <div class="artwork-inner" id="artworkInner"></div>
+          <div class="vinyl-hole"></div>
+        </div>
+        <div class="eq-bars" id="eqBars">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Track Info -->
+      <div class="track-info">
+        <div class="track-title marquee-wrap">
+          <span class="marquee-text" id="trackTitle">Loading...</span>
+        </div>
+        <div class="track-artist" id="trackArtist">Artist</div>
+        <div class="track-meta">
+          <span id="trackAlbum">Album</span>
+          <span class="dot">•</span>
+          <span id="trackYear">2024</span>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-section">
+        <span class="time" id="currentTime">0:00</span>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+          <div class="progress-thumb" id="progressThumb"></div>
+        </div>
+        <span class="time" id="totalTime">0:00</span>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button class="ctrl-btn secondary" id="btnShuffle" title="Shuffle">
+          <i class="fas fa-shuffle"></i>
+        </button>
+        <button class="ctrl-btn" id="btnPrev" title="Previous">
+          <i class="fas fa-backward-step"></i>
+        </button>
+        <button class="ctrl-btn play-btn" id="btnPlay" title="Play/Pause">
+          <i class="fas fa-play" id="playIcon"></i>
+        </button>
+        <button class="ctrl-btn" id="btnNext" title="Next">
+          <i class="fas fa-forward-step"></i>
+        </button>
+        <button class="ctrl-btn secondary" id="btnRepeat" title="Repeat">
+          <i class="fas fa-repeat"></i>
+        </button>
+      </div>
+
+      <!-- Volume -->
+      <div class="volume-section">
+        <button class="vol-icon" id="btnMute"><i class="fas fa-volume-high" id="volIcon"></i></button>
+        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80"/>
+        <span class="vol-pct" id="volPct">80%</span>
+      </div>
+
+    </div>
+
+    <!-- PLAYLIST -->
+    <div class="playlist-card">
+      <div class="playlist-header">
+        <h2>Playlist</h2>
+        <span class="playlist-count" id="playlistCount">0 tracks</span>
+      </div>
+      <ul class="playlist" id="playlist"></ul>
+    </div>
+
+  </div>
+
+  <!-- Hidden audio -->
+  <audio id="audioEl"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
