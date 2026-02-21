@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CALC — Modern Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="wrapper">
+    <div class="calc-header">
+      <span class="brand">CALC</span>
+      <span class="version">v2.0</span>
+    </div>
+
+    <div class="calculator">
+      <!-- Display -->
+      <div class="display-wrap">
+        <div class="expression" id="expression"></div>
+        <div class="display" id="display">0</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button class="btn special wide2" data-action="clear">AC</button>
+        <button class="btn special" data-action="sign">+/−</button>
+        <button class="btn special" data-action="percent">%</button>
+        <button class="btn op" data-op="/">÷</button>
+
+        <button class="btn num" data-num="7">7</button>
+        <button class="btn num" data-num="8">8</button>
+        <button class="btn num" data-num="9">9</button>
+        <button class="btn op" data-op="*">×</button>
+
+        <button class="btn num" data-num="4">4</button>
+        <button class="btn num" data-num="5">5</button>
+        <button class="btn num" data-num="6">6</button>
+        <button class="btn op" data-op="-">−</button>
+
+        <button class="btn num" data-num="1">1</button>
+        <button class="btn num" data-num="2">2</button>
+        <button class="btn num" data-num="3">3</button>
+        <button class="btn op" data-op="+">+</button>
+
+        <button class="btn num wide2" data-num="0">0</button>
+        <button class="btn num" data-action="dot">.</button>
+        <button class="btn equals" data-action="equals">=</button>
+      </div>
+    </div>
+
+    <div class="keyboard-hint">⌨ Keyboard supported</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
